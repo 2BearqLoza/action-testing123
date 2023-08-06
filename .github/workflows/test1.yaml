@@ -27,4 +27,8 @@ jobs:
       - run: cat $GITHUB_WORKSPACE/testFile
         shell: bash   
       - run: echo "$DevOpsDir"
-        shell: bash   
+        shell: bash
+        env:
+          DevOpsDir: "devops-dir2"
+      - run: echo "$DevOpsDir"
+        shell: bash

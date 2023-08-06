@@ -19,6 +19,11 @@ jobs:
     steps:
       - run: echo "Init-SCM"
         shell: pwsh
+        env:
+          ShouldPublish: true
+
+
+
 
   # Init-DevOps:
   #   runs-on: ubuntu-latest

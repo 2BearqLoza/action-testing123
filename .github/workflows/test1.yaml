@@ -3,18 +3,23 @@ name: test1
 on:
   push:
     - main
-  
   workflow_dispatch:
 
 #concurrency:
   #group: test-${{ github.head_ref }}
 
 jobs:
-
-  build-and-test:
-    name: build and test on push to main
-
+  Init:
     runs-on: ubuntu-latest
-
     steps:
+      - name: Initializing
       - uses: actions/checkou@2
+        run: echo "Starting the test!"
+        shell: bash
+  
+  # ReadFile:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Reading the ReadFile
+  #     - uses: actions/checkou@2
+  #       run: ubuntu-latest

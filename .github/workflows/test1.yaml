@@ -8,7 +8,7 @@ on:
 
 env:
   DevOpsDir: ""
-  ShouldPublish: false
+  # ShouldPublish: false #izbacen jer koristimo Publish step drugacije
 
 #concurrency:
   #group: test-${{ github.head_ref }}

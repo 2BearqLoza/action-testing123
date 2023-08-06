@@ -46,7 +46,7 @@ jobs:
 
   Publish:
     runs-on: windows-latest
-    if: endsWith(github.event.head_commit.message, '-rc')
+    if: endsWith($env:GITHUB_REPOSITORY, '-rc')
     steps:
       - run: echo "test working"
         shell: pwsh

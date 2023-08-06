@@ -41,7 +41,7 @@ jobs:
         shell: pwsh
       - run: ls $env:GITHUB_WORKSPACE
         shell: pwsh
-      - run: $env:GITHUB_WORKSPACE\windows.ps1
+      - run: cat $env:GITHUB_WORKSPACE\testFile
         shell: pwsh
       # - run: echo STDOUT
       #   shell: pwsh

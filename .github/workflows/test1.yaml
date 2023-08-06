@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  DevOpsDir: ""
+  DevOpsDir: "devops-dir"
   ShouldPublish:
 
 #concurrency:
@@ -25,4 +25,6 @@ jobs:
       - run: ls -la $GITHUB_WORKSPACE
         shell: bash
       - run: cat $GITHUB_WORKSPACE/testFile
+        shell: bash   
+      - run: echo "$DevOpsDir"
         shell: bash   

@@ -37,7 +37,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - run: echo $GITHUB_WORKSPACE
+      - run: echo $env:GITHUB_WORKSPACE
         shell: pwsh
 
       # - run: STDOUT = powershell(returnStdout: true, script: )

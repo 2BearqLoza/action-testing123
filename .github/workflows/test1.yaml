@@ -33,8 +33,15 @@ jobs:
   #     - run: cat $GITHUB_WORKSPACE/testFile
   #       shell: bash
 
-  # Versions:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - run: 
+  Versions:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo $GITHUB_WORKSPACE
+        shell: pwsh
+
+      # - run: STDOUT = powershell(returnStdout: true, script: )
+      #   shell: pwsh
+      # - run: echo STDOUT
+      #   shell: pwsh
 

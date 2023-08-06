@@ -14,6 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Initializing
-        uses: actions/checkou@2
         run: echo "Starting the test!"
         shell: bash

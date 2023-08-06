@@ -17,15 +17,13 @@ jobs:
   Init:
     runs-on: ubuntu-latest
     steps:
-      - name: Initializing
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - run: echo "Starting the test!"
+        shell: bash
 
   Start:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Starting the test!"
-        shell: bash
-
       - run: echo "READ"
         shell: bash
 

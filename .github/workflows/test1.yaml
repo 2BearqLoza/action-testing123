@@ -26,7 +26,7 @@ jobs:
     steps:
       - run: echo "READ"
         shell: bash
-      - run: cat $GITHUB_WORKSPACE/testFile
+      - run: ls -la $GITHUB_WORKSPACE
         shell: bash
 
 

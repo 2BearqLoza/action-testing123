@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: echo "Starting the test!"
+      - run: echo "Initializing the test!"
         shell: bash
 
   Start:
@@ -26,6 +26,9 @@ jobs:
     steps:
       - run: echo "READ"
         shell: bash
+      - run: echo $GITHUB_WORKSPACE
+        shell: bash
+
 
 
 

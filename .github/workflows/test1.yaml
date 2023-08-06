@@ -23,4 +23,6 @@ jobs:
       - run: echo "READ Workspace"
         shell: bash
       - run: ls -la $GITHUB_WORKSPACE
+        shell: bash
+      - run: cat $GITHUB_WORKSPACE/testFile
         shell: bash   

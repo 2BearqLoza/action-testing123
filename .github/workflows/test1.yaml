@@ -7,14 +7,20 @@ on:
   workflow_dispatch:
 
 env:
-  DevOpsDir: "devops-dir"
-  ShouldPublish:
+  DevOpsDir: ""
+  ShouldPublish: false
 
 #concurrency:
   #group: test-${{ github.head_ref }}
 
 jobs:
-  Init:
+  Init-SCM:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Init-SCM"
+        shell: bash
+
+  Init-DevOps:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -25,10 +31,10 @@ jobs:
       - run: ls -la $GITHUB_WORKSPACE
         shell: bash
       - run: cat $GITHUB_WORKSPACE/testFile
-        shell: bash   
-      - run: echo "$DevOpsDir"
         shell: bash
-        env:
-          DevOpsDir: "devops-dir2"
-      - run: echo "$DevOpsDir"
-        shell: bash
+
+  # Versions:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: 
+

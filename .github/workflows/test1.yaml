@@ -17,10 +17,3 @@ jobs:
       - uses: actions/checkou@2
         run: echo "Starting the test!"
         shell: bash
-  
-  # ReadFile:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Reading the ReadFile
-  #     - uses: actions/checkou@2
-  #       run: ubuntu-latest

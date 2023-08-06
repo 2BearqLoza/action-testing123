@@ -8,7 +8,9 @@ on:
 
 env:
   DevOpsDir: ""
-  # ShouldPublish: false #izbacen jer koristimo Publish step drugacije
+  # ShouldPublish: false 
+  ## izbacen jer koristimo Publish step drugacije
+  ## env u okviru joba ne moze da pregazi globalni env van tog joba, shouldPublish env de se mrda iz init-devops tamo gde se koristi, i tamo se radi provera if job name ends with -rc
 
 #concurrency:
   #group: test-${{ github.head_ref }}
@@ -47,4 +49,6 @@ jobs:
     if: endsWith(github.event.head_commit.message, '-rc')
     steps:
       - run: echo "test working"
+        shell: pwsh
+      - run: echo $env:GITHUB_ACTION_REPOSITORY
         shell: pwsh

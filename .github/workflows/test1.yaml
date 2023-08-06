@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  DevOpsDir: ""
+  ShouldPublish:
+
 #concurrency:
   #group: test-${{ github.head_ref }}
 
@@ -14,5 +18,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Initializing
+        uses: actions/checkout@2
+
+  Start:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Starting
         run: echo "Starting the test!"
         shell: bash
+
+        run: echo "READ"
+        shell: bash
+
+
+
+        

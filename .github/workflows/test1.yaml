@@ -50,5 +50,5 @@ jobs:
     steps:
       - run: echo "test working"
         shell: pwsh
-      - run: echo $env:GITHUB_ACTION_REPOSITORY
+      - run: echo $env:GITHUB_REPOSITORY
         shell: pwsh

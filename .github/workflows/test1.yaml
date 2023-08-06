@@ -20,16 +20,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: echo "Initializing the test!"
         shell: bash
-
-  Start:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "READ"
+      - run: echo "READ Workspace"
         shell: bash
       - run: ls -la $GITHUB_WORKSPACE
-        shell: bash
-
-
-
-
-        
+        shell: bash   

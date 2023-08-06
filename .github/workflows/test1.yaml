@@ -37,11 +37,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - run: echo $env:GITHUB_WORKSPACE
-        shell: pwsh
-      - run: ls $env:GITHUB_WORKSPACE
-        shell: pwsh
-      - run: STDOUT = .\windows.ps1
-        shell: pwsh
-      - run: echo STDOUT
+      - run: .\windows.ps1
         shell: pwsh

@@ -23,11 +23,10 @@ jobs:
   Start:
     runs-on: ubuntu-latest
     steps:
-      - name: Starting
-        run: echo "Starting the test!"
+      - run: echo "Starting the test!"
         shell: bash
 
-        run: echo "READ"
+      - run: echo "READ"
         shell: bash
 
 

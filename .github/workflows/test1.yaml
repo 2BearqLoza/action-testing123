@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Initializing
-        uses: actions/checkout@2
+        uses: actions/checkout@3
 
   Start:
     runs-on: ubuntu-latest

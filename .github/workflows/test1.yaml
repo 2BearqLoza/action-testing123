@@ -37,6 +37,7 @@ jobs:
 
 
   Versions:
+    needs: Init-SCM
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -65,6 +66,7 @@ jobs:
 #         shell: pwsh
 
   Publish:
+    needs: Versions
     runs-on: windows-latest
     if: endsWith(github.event.repository.name, '-testing123')
     steps:

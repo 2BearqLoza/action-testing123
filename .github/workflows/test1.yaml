@@ -1,9 +1,9 @@
-name: test1
+name: stoxx-datamanager-ci
 
 on:
   push:
     branches:
-      - main
+      - main #pull request here
   workflow_dispatch:
 
 env:
@@ -35,18 +35,61 @@ jobs:
   #     - run: cat $GITHUB_WORKSPACE/testFile
   #       shell: bash
 
+
   Versions:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - run: .\windows.ps1
+      - run: .\windows.ps1 #change path to where git repo was cloned
         shell: pwsh
-      # - run: echo $env:ShouldPublish
-      #   shell: pwsh
+
+#   Restore:
+#     runs-on: windows-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - run: .\restore.ps1
+#         shell: pwsh
+
+#   Build:
+#     runs-on: windows-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - run: .\build.ps1
+#         shell: pwsh
+
+#  Test:
+#     runs-on: windows-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - run: .\test.ps1
+#         shell: pwsh
 
   Publish:
     runs-on: windows-latest
     if: endsWith(github.event.repository.name, '-testing123')
     steps:
-      - run: echo "test working"
+      - run: echo "test working" #add publish step here
         shell: pwsh
+
+#   Finalize:
+#     runs-on: windows-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - run: .\test.ps1
+#         shell: pwsh
+
+
+
+
+# Post - u jenkinsu je nameste post always, sto znaci da nema condition.
+# zasto onda ne bi bio samo jos jedan step, koji ide na kraju?
+
+# Post - ovde stoji currentBuild.result = success ili fail u zavisnosti od post-a, 
+# samim time nema potrebe da stoji u finalize stepu; 
+# takodje, nigde se ne okida echo za taj result
+
+
+
+
+
+

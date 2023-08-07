@@ -33,7 +33,7 @@ jobs:
         shell: pwsh
       - run: ls $env:GITHUB_WORKSPACE
         shell: pwsh
-      - run: cat $GITHUB_WORKSPACE\testFile
+      - run: cat $env:GITHUB_WORKSPACE\devops.json
         shell: pwsh
 
 

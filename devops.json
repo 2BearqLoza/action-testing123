@@ -1,5 +1,6 @@
 {
   "version": "0.0.0.1",
   "devOpsScripts": "https://github.test.com",
-  "devOpsDirName": "stoxx-devops"
+  "devOpsDirName": "stoxx-devops",
+  "devOpsScriptVersion": "LATEST"
 }

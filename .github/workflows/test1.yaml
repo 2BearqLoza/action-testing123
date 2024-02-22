@@ -3,7 +3,7 @@ name: stoxx-datamanager-ci
 on:
   push:
     branches:
-      - main #pull request here
+      - pull_request
   workflow_dispatch:
 
 env:
